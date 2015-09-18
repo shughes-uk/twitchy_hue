@@ -1,0 +1,25 @@
+#--------Twitch settings--------
+
+# Twitch.TV username for the bot, must be a registered username!
+twitch_username : "your_username_here"
+
+# Get your OAuth for above Twitch.TV account at http://www.twitchapps.com/tmi/
+twitch_oauth : "Your oauth in here!"
+
+# Twitch.TV channel to connect to ex: "#geekandsundry" for the geekandsundry channel
+twitch_channel : "#your_channel_here"
+
+#--------Hue Settings--------
+
+# IP Address of the  phillips hue bridge
+hue_bridge_ip : "192.168.1.211"
+
+# The colors to flash when it detects a new subscriber, any color name from http://www.cssportal.com/css3-color-names/ are valid
+color_1 : red
+color_2 : blue
+
+# Number of times to flash between the colors
+times_to_flash : 10
+
+# The speed at which it flashes, flash_speed 1 is slow but safe, it can go down as low as 0.1 but may display weird behavior
+flash_speed : 1
