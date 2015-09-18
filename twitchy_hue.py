@@ -133,8 +133,10 @@ if __name__ == "__main__":
             alerter.run()
         except SystemExit:
             sys.exit()
+            raw_input("Error, press enter to close program")
         except Exception as e:
             logger.info(traceback.format_exc())
+            raw_input("Error, press enter to close program")
+
         # If we get here, try to shutdown the bot then restart in 5 seconds
         time.sleep(5)
-    raw_input("Press enter key to close")
