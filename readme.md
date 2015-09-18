@@ -1,8 +1,8 @@
-# Subscriber Hue Alerter
+# Twitchy Hue
 
 ## Installation
 
-Fill out the required settings in config.txt and then simply run python subscriber_alerter.py
+Fill out the required settings in config.txt and then simply run python twitch_hue.py
 
 ## Features
 
