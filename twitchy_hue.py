@@ -84,7 +84,6 @@ class sub_alerter:
                         )
 
     def handleIRCMessage(self, ircMessage):
-        print ircMessage
         if re.search(r":tmi.twitch.tv NOTICE \* :Error logging i.*", ircMessage):
             logger.critical("Error logging in to twitch irc, check your oauth and username are set correctly in config.txt!")
             sys.exit()
