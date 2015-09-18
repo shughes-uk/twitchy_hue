@@ -125,18 +125,19 @@ class sub_alerter:
 
 # 'main'
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG,format="%(asctime)s.%(msecs)d %(levelname)s %(name)s : %(message)s",datefmt="%H:%M:%S")
-    while True:
-        alerter = sub_alerter()
-        try:
-            alerter.connect(6667)
-            alerter.run()
-        except SystemExit:
-            sys.exit()
-            raw_input("Error, press enter to close program")
-        except Exception as e:
-            logger.info(traceback.format_exc())
-            raw_input("Error, press enter to close program")
+    try:
+        logging.basicConfig(level=logging.DEBUG,format="%(asctime)s.%(msecs)d %(levelname)s %(name)s : %(message)s",datefmt="%H:%M:%S")
+        while True:
+            alerter = sub_alerter()
+            try:
+                alerter.connect(6667)
+                alerter.run()
+            except SystemExit:
+                sys.exit()
+            except Exception as e:
+                logger.info(traceback.format_exc())
 
-        # If we get here, try to shutdown the bot then restart in 5 seconds
-        time.sleep(5)
+            # If we get here, try to shutdown the bot then restart in 5 seconds
+            time.sleep(5)
+    finally:
+        raw_input("Press enter or ctrl c to finish")
